@@ -1,0 +1,14 @@
+.section { background: linear-gradient(to bottom, var(--navy-900), var(--navy-950)); }
+.eyebrow { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--cyan-400); margin-bottom: 8px; font-weight: 600; }
+.layout { display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: start; }
+@media (max-width: 800px) { .layout { grid-template-columns: 1fr; } }
+.flow { display: flex; flex-direction: column; }
+.step { display: flex; align-items: center; gap: 14px; padding: 14px 16px; }
+.stepIcon { font-size: 1.4rem; flex-shrink: 0; width: 32px; text-align: center; }
+.stepLabel { font-size: 0.9rem; font-weight: 700; color: var(--text-primary); }
+.stepDesc { font-size: 0.75rem; color: var(--text-muted); margin-top: 2px; }
+.arrow { text-align: center; color: var(--cyan-400); font-size: 1.2rem; padding: 4px 0; opacity: 0.6; }
+.explanations { display: flex; flex-direction: column; gap: 14px; }
+.explCard { padding: 18px 20px; }
+.explTerm { font-size: 0.9rem; font-weight: 700; color: var(--cyan-300); margin-bottom: 6px; }
+.explDetail { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.65; }

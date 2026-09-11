@@ -1,0 +1,31 @@
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 32px; transition: all 0.3s ease; }
+.nav.scrolled {
+  background: rgba(4, 15, 30, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-glass);
+  padding: 12px 32px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+}
+.inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logoIcon { font-size: 1.5rem; color: var(--cyan-400); animation: pulse 3s ease infinite; line-height: 1; }
+.logoText {
+  font-size: 1.1rem; font-weight: 800; letter-spacing: 0.12em;
+  background: linear-gradient(135deg, var(--cyan-300), var(--cyan-500));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.links { display: flex; list-style: none; gap: 4px; }
+.link {
+  display: block; padding: 6px 14px; color: var(--text-secondary); text-decoration: none;
+  font-size: 0.875rem; font-weight: 500; border-radius: 8px; letter-spacing: 0.03em; transition: all 0.2s ease;
+}
+.link:hover { color: var(--cyan-300); background: var(--glow-cyan); }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 2px; background: var(--cyan-400); border-radius: 2px; transition: all 0.3s; }
+@media (max-width: 700px) {
+  .hamburger { display: flex; }
+  .links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column;
+    background: rgba(4,15,30,0.97); padding: 12px 24px 20px; border-bottom: 1px solid var(--border-glass); backdrop-filter: blur(16px); }
+  .links.open { display: flex; }
+}
